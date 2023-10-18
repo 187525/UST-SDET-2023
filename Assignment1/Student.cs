@@ -37,7 +37,6 @@ namespace Assignment1
             else if (avg >= 70 && avg < 80)
             {
                 Console.WriteLine("grade= C");
-
             }
             else
             {
