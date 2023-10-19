@@ -43,7 +43,7 @@ Console.WriteLine(res);
 */
 
 using Basic_Program;
-
+/*
 Electricity electricity1=new (12345,9000,9300,"XX");
 Console.WriteLine(electricity1.consumernumber);
 Console.WriteLine(electricity1.consumername);
@@ -53,5 +53,19 @@ Console.WriteLine(electricity1.CalculateBill());
 Electricity electricity2 = new(12345, 9000, 9300, "XX");
 Console.WriteLine(electricity2.consumernumber);
 Console.WriteLine(electricity2.consumername);
+*/
+/*
+Employee employee = new(111, "AA", "IT", 10000);
+Console.WriteLine("EMPLOYEE ID :{0} \n Employee_NAME : {1} \n " + "Employee_DEPT : {2} \n BASIC_PAY: {3}",
+    employee.Eid,
+    employee.Ename,
+    employee.Dept,
+    employee.Basicpay);
 
-Console.WriteLine(electricity2.CalculateBill());
+Console.WriteLine("Netsalary : {0} ", employee.CalculateSalary());
+*/
+
+ArrayEx arrayex=new ArrayEx();
+//arrayex.Onedim();
+//arrayex.TwoDim();
+arrayex.Ja();
