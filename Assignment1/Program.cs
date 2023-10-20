@@ -1,7 +1,6 @@
 ﻿//18-10-2023
 
-using Assignment_18_10_23;
-using Assignment1;
+//using Assignment_18_10_23;
 
 /*Student student1 = new (80,80,80,"XX");
 Console.WriteLine(student1.studentname);
@@ -24,7 +23,7 @@ foreach (var item in product)
 
 }*/
 
-
+/*
 Students[] students = new Students[]
 {
 
@@ -52,3 +51,32 @@ foreach (Students item in students)
     Console.WriteLine($"Average Marks is: {item.CalculateAverage()}");
     Console.WriteLine(item.GetMarksSummary());
 }
+*/
+
+using Assignment1;
+
+ElectronicProduct EP = new ElectronicProduct("PEN",10,5,2);
+Console.WriteLine("***Electronics ProductDetails***\n");
+EP.DisplayWarrantyPeriod();
+Console.WriteLine($"Product Name:{EP.Productname}\nPrice:{EP.Price}\nQuantity:{EP.Quantity}");
+Console.WriteLine($"Product Value:{EP.ProductValue()}");
+
+Console.WriteLine("\n\n");
+Console.WriteLine("***Digital ProductDetails***\n");
+
+DigitalElectronics DP = new DigitalElectronics("Fridge", 50000, 1, 5,"Full-option");
+Console.WriteLine($"Product Name:{DP.Productname}\nPrice:{DP.Price}\nQuantity:{DP.Quantity}");
+Console.WriteLine(DP.ProductValue());
+DP.DisplayWarrantyPeriod();
+DP.DisplayFileformat();
+
+
+Console.WriteLine("\n\n");
+
+
+
+Console.WriteLine("***Clothing ProductDetails***\n");
+ClothingProduct clothingProduct = new ClothingProduct("Tshirt", "XXL", 700, 3);
+Console.WriteLine($"Product Name:{clothingProduct.Productname}\nPrice:{clothingProduct.Price}\nQuantity:{clothingProduct.Quantity}");
+clothingProduct.DisplayClothingProductSize();
+Console.WriteLine($"Total Value Of Product:{clothingProduct.ProductValue()}");

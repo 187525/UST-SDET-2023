@@ -25,7 +25,7 @@ namespace Assignment1
 
         public void SetPrice(double newPrice)
         {
-            this.Price = newPrice;
+            Price = newPrice;
         }
 
         public double ProductValue()

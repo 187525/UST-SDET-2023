@@ -1,4 +1,65 @@
-﻿/* ADDITION OF TWO NUMBERS
+﻿using Basic_Program;
+
+
+
+
+
+
+
+
+/*Console.WriteLine("1. TS /n 2: NTS \n" );
+
+switch(Convert.ToInt32(Console.ReadLine()))
+{
+    case 1:
+        TeachingStaff ts=new TeachingStaff();
+        ts.staffid = 111;
+        ts.Name = "TS1";
+        ts.Dept = "CS";
+        ts.Specializations = "OS, DBMS, DS";
+        ts.Sem = 4;
+        ts.DisplayTStaffDetails();
+        ts.DisplayStaffDetails();
+        break;
+    case 2:
+        NonTeachingStaff nts = new NonTeachingStaff();
+        nts.staffid = 111;
+        nts.Name = "NTS1";
+        nts.Dept = "ADMIN";
+       // nts.Resposibilities = "Att, sal";
+       // nts.Experience = 4;
+        //nts.DisplayTStaffDetails();
+        //nts.DisplayStaffDetails();
+        break;
+}
+*/
+/*
+EV ev = new();
+ev.Vehnum=444;
+ev.Brand = "xx";
+ev.Model = "AA";
+ev.SetTypeForVehicle();
+
+
+PV pv = new();
+pv.Vehnum = 234567;
+pv.Brand = "suzuti";
+pv.Model = "bb";
+pv.Disp();
+Console.WriteLine(pv.SetTypeForVehicle());
+*/
+
+
+
+
+
+
+
+
+/*
+
+
+/* ADDITION OF TWO NUMBERS
 Console.WriteLine("Enter 2 numbers:");
 int num1,num2,ans;
 
@@ -42,7 +103,7 @@ double res = calculator.add(num1,num2);
 Console.WriteLine(res);
 */
 
-using Basic_Program;
+
 /*
 Electricity electricity1=new (12345,9000,9300,"XX");
 Console.WriteLine(electricity1.consumernumber);
@@ -65,7 +126,32 @@ Console.WriteLine("EMPLOYEE ID :{0} \n Employee_NAME : {1} \n " + "Employee_DEPT
 Console.WriteLine("Netsalary : {0} ", employee.CalculateSalary());
 */
 
-ArrayEx arrayex=new ArrayEx();
+/*ArrayEx arrayex=new ArrayEx();
 //arrayex.Onedim();
 //arrayex.TwoDim();
-arrayex.Ja();
+arrayex.Ja();*/
+
+
+//StudentMarks marks = new();
+
+/*StudentGrade grade = new();
+grade.RollNo = 200;
+grade.StudName = "Arya";
+grade.Mark1 = 300;
+grade.Mark2 = 400;
+grade.Mark3 = 200;
+grade.DisplayStudentDetails();
+Console.WriteLine("Total " + grade.CalculateTotal());
+Console.WriteLine("Average " +grade.CalculateAverage());
+Console.WriteLine("Grade " + grade.CalculateGrade());
+
+/*StudentGrade mark = new();
+mark.RollNo = 200;
+mark.StudName = "Arya";
+mark.City = "Trivandrum";
+mark.Mark1 = 300;
+mark.Mark2 = 400;
+mark.Mark3 = 200;
+mark.DisplayStudentDetails();
+Console.WriteLine("Total " + mark.CalculateTotal());
+Console.WriteLine("Average " + mark.CalculateAverage());*/
