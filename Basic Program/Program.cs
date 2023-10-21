@@ -1,5 +1,14 @@
 ﻿using Basic_Program;
 
+Doctor doc= new Doctor();
+doc.AddNewDoctor();
+doc.DisplayDoctorDetails();
+
+doc.ModifyDoctor(); 
+doc.DisplayDoctorDetails();
+doc.BookApp(9876, "XX");
+doc.DelApp("XX");
+
 
 
 
