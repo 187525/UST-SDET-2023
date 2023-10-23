@@ -1,19 +1,50 @@
 ﻿using Basic_Program;
 
-Doctor doc= new Doctor();
+
+/*BankDetails bankDetails = new BankDetails(1234,11234567860L,"Vishnu","InActive");*/
+/*BankDetails bankdetailsone = new BankDetails();*/
+BankDetails bankDetailsNew = new BankDetailsNew(123, 12345677L, "Vishnu", "Active");
+bankDetailsNew.WelcomeMessage();
+Console.WriteLine("1.CustomerId\n2.AccountNumber\n3.CustomerName");
+int choice;
+Console.WriteLine("Choose One Option");
+choice = Convert.ToInt32(Console.ReadLine());
+switch (choice)
+{
+    case 1:
+        Console.WriteLine("Enter The CustomerId");
+        int customerid = Convert.ToInt32(Console.ReadLine());
+        bankDetailsNew.GetAccountDetails(customerid);
+        bankDetailsNew.ExitMessage();
+        break;
+    case 2:
+        Console.WriteLine("Enter The AccountNumber");
+        long accountnumber = Convert.ToInt64(Console.ReadLine());
+        bankDetailsNew.GetAccountDetails(accountnumber);
+        bankDetailsNew.ExitMessage();
+        break;
+    case 3:
+        Console.WriteLine("Enter the CustomerName Name");
+        string? customername = Console.ReadLine();
+        bankDetailsNew.GetAccountDetails(customername);
+        bankDetailsNew.ExitMessage();
+        break;
+    default:
+        Console.WriteLine("INVALID ENTRY TRY AGAIN LATER!!!");
+        break;
+
+}
+
+//_____________________________________________________________//
+/*Doctor doc= new Doctor();
 doc.AddNewDoctor();
 doc.DisplayDoctorDetails();
 
 doc.ModifyDoctor(); 
 doc.DisplayDoctorDetails();
 doc.BookApp(9876, "XX");
-doc.DelApp("XX");
-
-
-
-
-
-
+doc.DelApp("XX");*/
+//------------------------------------------------------------------//
 
 
 /*Console.WriteLine("1. TS /n 2: NTS \n" );
@@ -42,7 +73,7 @@ switch(Convert.ToInt32(Console.ReadLine()))
         break;
 }
 */
-/*
+/*---------------------------------------------------------------------
 EV ev = new();
 ev.Vehnum=444;
 ev.Brand = "xx";
@@ -57,15 +88,7 @@ pv.Model = "bb";
 pv.Disp();
 Console.WriteLine(pv.SetTypeForVehicle());
 */
-
-
-
-
-
-
-
-
-/*
+//-------------------------------------------------------------------
 
 
 /* ADDITION OF TWO NUMBERS
@@ -103,7 +126,7 @@ string[] s=s3.Split(' ');
 for(int i=0;i<s.Length;i++)
     Console.WriteLine(s[i]);
 */
-
+//------------------------------------------------------------
 
 /*Calculation calculator = new Calculation();
 int num1 = Convert.ToInt32(Console.ReadLine());

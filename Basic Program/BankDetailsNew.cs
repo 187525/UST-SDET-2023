@@ -8,14 +8,27 @@ namespace Basic_Program
 {
     internal class BankDetailsNew : BankDetails
     {
-        public BankDetailsNew(int custid, long accno, string? name, string? status) : base(custid, accno, name, status)
+        public BankDetailsNew(int customerId, long accountNumber, string? customerName, string? status) : base(customerId, accountNumber, customerName, status)
         {
+            CustomerId = customerId;
+            AccountNumber = accountNumber;
+            CustomerName = customerName;
+            Status = status;
+        }
+
+        public int CustomerId { get; set; }
+
+        public long AccountNumber { get; set; }
+        public string? CustomerName { get; set; }
+        public string? Status { get; set; }
+        public override void WelcomeMessage()
+        {
+            Console.WriteLine($"Welcome to ICICI BANK {CustomerName}");
 
         }
-        public void WelcomeMessage()
+        public override void ExitMessage()
         {
-            Console.WriteLine("Welcome {0]!!", Name);
-
+            Console.WriteLine("Completed!!!");
         }
     }
 }
