@@ -55,7 +55,7 @@ foreach (Students item in students)
 
 using Assignment1;
 
-ElectronicProduct EP = new ElectronicProduct("PEN",10,5,2);
+/*ElectronicProduct EP = new ElectronicProduct("PEN",10,5,2);
 Console.WriteLine("***Electronics ProductDetails***\n");
 EP.DisplayWarrantyPeriod();
 Console.WriteLine($"Product Name:{EP.Productname}\nPrice:{EP.Price}\nQuantity:{EP.Quantity}");
@@ -79,4 +79,27 @@ Console.WriteLine("***Clothing ProductDetails***\n");
 ClothingProduct clothingProduct = new ClothingProduct("Tshirt", "XXL", 700, 3);
 Console.WriteLine($"Product Name:{clothingProduct.Productname}\nPrice:{clothingProduct.Price}\nQuantity:{clothingProduct.Quantity}");
 clothingProduct.DisplayClothingProductSize();
-Console.WriteLine($"Total Value Of Product:{clothingProduct.ProductValue()}");
+Console.WriteLine($"Total Value Of Product:{clothingProduct.ProductValue()}");*/
+
+
+//Console.WriteLine("Enter the Employee_ID:");
+//int eid=Convert.ToInt32(Console.ReadLine());
+//Console.WriteLine("Enter the First name:");
+//string? firstname=Console.ReadLine();
+//Console.WriteLine("Enter the Last name:");
+//string? lastname = Console.ReadLine();
+//Console.WriteLine("Enter the age:");
+//int age=Convert.ToInt32(Console.ReadLine());
+
+//Employee emp = new Employee(age,firstname,lastname,eid);
+//emp.DispayInfo(age);
+
+Rectangle rectangle = new Rectangle(10, 10);
+rectangle.Draw();
+rectangle.CalculateArea();
+rectangle.CalculatePerimeter();
+
+Circle circle = new Circle(10);
+circle.Draw();
+circle.CalculateArea();
+circle.CalculatePerimeter();
