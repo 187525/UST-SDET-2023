@@ -1,9 +1,30 @@
 ﻿using Basic_Program;
 
+Basic_Program.GC gC= new Basic_Program.GC();
+gC.ListHandling();
+gC.Stackhandling();
+gC.Queuehandling();
+
+
+
+
+/*NGC ngc= new NGC();
+ngc.ArrayListHandling();
+ngc.StackHandling();
+ngc.QueueHandling();*/
+
+/*Doctor doc= new Doctor();
+doc.AddNewDoctor();
+doc.DisplayDoctorDetails();
+
+doc.ModifyDoctor(); 
+doc.DisplayDoctorDetails();
+doc.BookApp(9876, "XX");
+doc.DelApp("XX");*/
 
 /*BankDetails bankDetails = new BankDetails(1234,11234567860L,"Vishnu","InActive");*/
 /*BankDetails bankdetailsone = new BankDetails();*/
-BankDetails bankDetailsNew = new BankDetailsNew(123, 12345677L, "Vishnu", "Active");
+/*BankDetails bankDetailsNew = new BankDetailsNew(123, 12345677L, "Vishnu", "Active");
 bankDetailsNew.WelcomeMessage();
 Console.WriteLine("1.CustomerId\n2.AccountNumber\n3.CustomerName");
 int choice;
@@ -33,18 +54,11 @@ switch (choice)
         Console.WriteLine("INVALID ENTRY TRY AGAIN LATER!!!");
         break;
 
-}
+}*/
 
-//_____________________________________________________________//
-/*Doctor doc= new Doctor();
-doc.AddNewDoctor();
-doc.DisplayDoctorDetails();
 
-doc.ModifyDoctor(); 
-doc.DisplayDoctorDetails();
-doc.BookApp(9876, "XX");
-doc.DelApp("XX");*/
-//------------------------------------------------------------------//
+
+
 
 
 /*Console.WriteLine("1. TS /n 2: NTS \n" );
@@ -73,7 +87,7 @@ switch(Convert.ToInt32(Console.ReadLine()))
         break;
 }
 */
-/*---------------------------------------------------------------------
+/*
 EV ev = new();
 ev.Vehnum=444;
 ev.Brand = "xx";
@@ -88,7 +102,15 @@ pv.Model = "bb";
 pv.Disp();
 Console.WriteLine(pv.SetTypeForVehicle());
 */
-//-------------------------------------------------------------------
+
+
+
+
+
+
+
+
+/*
 
 
 /* ADDITION OF TWO NUMBERS
@@ -126,7 +148,7 @@ string[] s=s3.Split(' ');
 for(int i=0;i<s.Length;i++)
     Console.WriteLine(s[i]);
 */
-//------------------------------------------------------------
+
 
 /*Calculation calculator = new Calculation();
 int num1 = Convert.ToInt32(Console.ReadLine());
