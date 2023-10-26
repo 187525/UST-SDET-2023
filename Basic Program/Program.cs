@@ -1,6 +1,43 @@
 ﻿using Basic_Program;
+using Basic_Program.ExceptionMessage;
 
-Basic_Program.GC gC= new Basic_Program.GC();
+/*ExcepHandling exe = new ExcepHandling(10, 10);
+MyExceptions excep = new MyExceptions();
+
+try
+{
+    excep.NumCheck();
+}
+catch(Num1Exception ex)
+{
+    Console.WriteLine(excep.exmessdict[3]);
+}
+/*try
+{
+    exe.Divide();
+}
+
+ catch (ArithmeticException ex)
+{
+
+    Console.WriteLine(MyExceptions.exmessdict[0]);
+}    
+catch(IndexOutOfRangeException ex)
+      {
+    Console.WriteLine(MyExceptions.exmessdict[1]);
+}
+      catch(Exception ex) 
+      {
+    Console.WriteLine(MyExceptions.exmessdict[2]);
+}
+      finally
+      {
+    Console.WriteLine("done");
+}
+
+
+
+/*sic_Program.GC gC= new Basic_Program.GC();
 gC.ListHandling();
 gC.Stackhandling();
 gC.Queuehandling();
@@ -209,3 +246,51 @@ mark.Mark3 = 200;
 mark.DisplayStudentDetails();
 Console.WriteLine("Total " + mark.CalculateTotal());
 Console.WriteLine("Average " + mark.CalculateAverage());*/
+
+using Basic_Program.ExceptionMessage;
+using Basic_Program;
+
+ExceptionHandling exceptionHandling = new(3, 5);
+//try
+//{
+//    exceptionHandling.NumberCheck();
+//}
+//catch (ArgumentException ex)
+//{
+//    Console.WriteLine(ex.Message);
+//}
+//try
+//{
+//    exceptionHandling.Divide();
+//}
+//catch (ArithmeticException ex)
+//{
+//    Console.WriteLine(MyExceptions.exceptionmessage[0]);
+//    Console.WriteLine(ex.StackTrace);
+//    Console.WriteLine(ex.Source);
+//}
+//catch (IndexOutOfRangeException ex)
+//{
+//    Console.WriteLine(MyExceptions.exceptionmessage[1]);
+//}
+//catch (Exception ex)
+//{
+//    Console.WriteLine(MyExceptions.exceptionmessage[2]);
+//}
+try
+{
+    exceptionHandling.NumberCheck1();
+}
+catch (Number1Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}
+try
+{
+    exceptionHandling.NumberCheck2();
+
+}
+catch (Number2Exception ex)
+{
+    Console.WriteLine(ex.Message);
+}

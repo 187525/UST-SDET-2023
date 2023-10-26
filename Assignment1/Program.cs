@@ -54,6 +54,7 @@ foreach (Students item in students)
 */
 
 using Assignment1;
+using static Assignment1.ExceptionHandling.MyException;
 
 /*ElectronicProduct EP = new ElectronicProduct("PEN",10,5,2);
 Console.WriteLine("***Electronics ProductDetails***\n");
@@ -81,7 +82,7 @@ Console.WriteLine($"Product Name:{clothingProduct.Productname}\nPrice:{clothingP
 clothingProduct.DisplayClothingProductSize();
 Console.WriteLine($"Total Value Of Product:{clothingProduct.ProductValue()}");*/
 
-
+//--------------------------------------------------------------------------------------
 //Console.WriteLine("Enter the Employee_ID:");
 //int eid=Convert.ToInt32(Console.ReadLine());
 //Console.WriteLine("Enter the First name:");
@@ -93,7 +94,7 @@ Console.WriteLine($"Total Value Of Product:{clothingProduct.ProductValue()}");*/
 
 //Employee emp = new Employee(age,firstname,lastname,eid);
 //emp.DispayInfo(age);
-
+//------------------------------------------------------------------------------------
 /*Rectangle rectangle = new Rectangle(10, 10);
 rectangle.Draw();
 rectangle.CalculateArea();
@@ -104,7 +105,7 @@ circle.Draw();
 circle.CalculateArea();
 circle.CalculatePerimeter();*/
 
-
+//-------------------------------------------------------------------------------------
 /*InsurancePolicy IP = new InsurancePolicy(2, "Medical_Insurance", 23000);
 IP.RenewPolicy(50000);
 IP.RenewPolicy();*/
@@ -112,7 +113,7 @@ IP.RenewPolicy();*/
 
 
 
-
+/*-----------------------------------------------------------------------------
 Console.WriteLine("enter the policy ID:");
 int PolicyId = Convert.ToInt32(Console.ReadLine());
 Console.WriteLine("Enter the Policy Name:");
@@ -132,6 +133,36 @@ double PremiumAmount1 = Convert.ToInt64(Console.ReadLine());
 Console.WriteLine("enter the Car Type:");
 string? cartype = Console.ReadLine();
 CarInsurance car = new CarInsurance(PolicyId, PolicyName1, PremiumAmount1, cartype);
-Console.WriteLine(car.CalculatePremium());
+Console.WriteLine(car.CalculatePremium());*/
+//------------------------------------------------------------------------------------------------
+/*Customer customer = new Customer();
+Console.Write("Enter the Phone number:");
+long number = Convert.ToInt64(Console.ReadLine());
+customer.SearchDetails(number);*/
+//---------------------------------------------------------------------------------------------------
+/*CallRecord record = new CallRecord();
+Console.WriteLine("Enter the phone number");
+long number = Convert.ToInt64(Console.ReadLine());
+CallRecord.CallHistory(number);
+CallRecord.CallCounts();*/
+
+//---------------------------------------------------------------------------------------------------
+try
+{
+    Patient.AddPatient(1, "Vishnu", 25, "Cholestrol");
+    // Patient.AddPatient(2, "", 23, "sss");
+    //Patient.AddPatient(3, "Hari", 123, "Pressure");
+    Patient.AddPatient(3, "Hari", 23, "");
+
+
+    Patient.Display();
+
+
+
+}
+catch (CustomException ex)
+{
+    Console.WriteLine(ex.Message);
+}
 
 
