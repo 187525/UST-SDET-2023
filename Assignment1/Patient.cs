@@ -1,55 +1,69 @@
-﻿using Assignment1.ExceptionHandling;
+﻿using Assignment1.Myexception;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-using static Assignment1.ExceptionHandling.MyException;
+
 
 namespace Assignment1
 {
     internal class Patient
     {
-        public int PatientId { get; set; }
+        public int PatientID { get; set; }
         public string? PatientName { get; set; }
+
         public int Age { get; set; }
-        public string? Diagnose { get; set; }
-        public static List<Patient> patients = new List<Patient>();
 
+        public string? Diagnosis { get; set; }
 
-
-        public static void AddPatient(int patientId, string? patientName, int age, string? diagnose)
+        List<Patient> patients = new List<Patient>();
+        public void AddPatient(int id, string? name, int age, string? diagnosis)
         {
-            if (age < 0 || age > 120)
-            {
-                throw new CustomException(MyException.error["One"]);
-            }
-            if (string.IsNullOrEmpty(patientName))
-            {
-                throw new CustomException(MyException.error["Two"]);
-            }
-            if (string.IsNullOrEmpty(diagnose))
-            {
-                throw new CustomException(MyException.error["Three"]);
-            }
-            Patient patient = new Patient();
-            patient.PatientId = patientId;
-            patient.PatientName = patientName;
-            patient.Age = age;
-            patient.Diagnose = diagnose;
-            patients.Add(patient);
 
+            if (string.IsNullOrEmpty(name))
+            {
+                throw new MyExceptions(CustomException.exceptionmessage[2]);
+            }
+            else if (age < 0 || age >= 120)
+            {
+                throw new MyExceptions(CustomException.exceptionmessage[1]);
+            }
+            else if (string.IsNullOrEmpty(diagnosis))
+            {
+                throw new MyExceptions(CustomException.exceptionmessage[3]);
+            }
+            else
+            {
+                patients.Add(new Patient { PatientID = id, PatientName = name, Age = age, Diagnosis = diagnosis });
+
+            }
+        }
+        public void AddPatientTextfile(int id,string name,int age,string? diagnosis)
+        {
+            FileStream filestream=new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\Patient.txt",FileMode.Create,FileAccess.Write);
+            StreamWriter writer=new StreamWriter(filestream);
+            writer.WriteLine("Patient ID:" + id);
+            writer.WriteLine("Patient Name:" + name);
+            writer.WriteLine("age:" + age);
+            writer.WriteLine("Diagnosis:" + diagnosis);
+            writer.Close();
+            filestream.Close();
+        }
+       
+
+        public void ReadDeatils()
+        {
+            FileStream filestream=new FileStream("C:\\Users\\Administrator\\Desktop\\Files\\Patient.txt",FileMode.Open,FileAccess.Read);
+            StreamReader reader=new StreamReader(filestream);   
+            string? str=reader.ReadToEnd();
+            Console.WriteLine();
+            reader.Close();
+            filestream.Close ();
 
 
         }
-        public static void Display()
-        {
-            Console.WriteLine("***Patient details***");
-            foreach (Patient patient in patients)
-            {
-                Console.WriteLine($"Patient Id :{patient.PatientId}\nPatientName:{patient.PatientName}" +
-                    $"\nPatientAge:{patient.Age}\nDiagnose:{patient.Diagnose}");
-            }
-        }
+        
+
     }
 }

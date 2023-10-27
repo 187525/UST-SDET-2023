@@ -298,4 +298,9 @@ catch (Number2Exception ex)
 
 
 FileOperations FO=new FileOperations();
-FO.CreateFile();
+//FO.CreateFile();
+////FO.WriteData();
+//FO.ReadData();
+//FO.CopyMoveFile();
+//FO.DeleteFile();
+FO.FileProperties();
