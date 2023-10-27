@@ -249,7 +249,8 @@ Console.WriteLine("Average " + mark.CalculateAverage());*/
 
 using Basic_Program.ExceptionMessage;
 using Basic_Program;
-
+/*
+ * 
 ExceptionHandling exceptionHandling = new(3, 5);
 //try
 //{
@@ -293,4 +294,8 @@ try
 catch (Number2Exception ex)
 {
     Console.WriteLine(ex.Message);
-}
+}                       */
+
+
+FileOperations FO=new FileOperations();
+FO.CreateFile();
