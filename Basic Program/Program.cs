@@ -297,10 +297,57 @@ catch (Number2Exception ex)
 }                       */
 
 
-FileOperations FO=new FileOperations();
+//FileOperations FO=new FileOperations();
 //FO.CreateFile();
 ////FO.WriteData();
 //FO.ReadData();
 //FO.CopyMoveFile();
 //FO.DeleteFile();
-FO.FileProperties();
+//FO.FileProperties();
+
+
+/*GenEx<int> g1 = new GenEx<int>(10, 20);
+Console.WriteLine(g1.Val1 + "   " + g1.Val2);
+
+
+GenEx<double> g2 = new GenEx<double>(10.45676, 20.687897);
+Console.WriteLine(g2.Val1 + "   " + g2.Val2);
+
+
+
+GenEx<string> g3 = new GenEx<string>("AAA", "BBB");
+Console.WriteLine(g3.Val1 + "   " + g3.Val2);
+
+
+GenEx<bool> g4 = new GenEx<bool>(true, false);
+Console.WriteLine(g4.Val1 + "   " + g4.Val2);*/
+
+
+/*GenEx<int>  ga=new GenEx<int>(new int[3] {10,20,30});
+ga.Disp();*/
+
+
+public delegate void Del1(string mess);
+
+
+
+//class Program:DelEx
+//{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
+
+//    public static void main(string[] args)
+//    {
+
+//        DelEx de]lEx = new();
+//        Del1 dobj1 = DelEx.MethodA;
+//        dobj1.Invoke();
+
+//    }
+//}
+
+
+
+
+
+
+
+

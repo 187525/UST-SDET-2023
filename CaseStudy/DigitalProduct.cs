@@ -12,12 +12,7 @@ namespace CaseStudy
         public string? DownloadLink { get; set; }
         public string? FileFormat { get; set; }
 
-        public void DeleveringProduct()
-        {
-            Console.WriteLine("Download link is {0}", DownloadLink);
-        }
-
-        public void PlacingOrder()
+        public void PlaceOrder()
         {
             Console.WriteLine("Do you want to continue the order\n1.yes\n2.no");
             int option = Convert.ToInt32(Console.ReadLine());
@@ -34,7 +29,7 @@ namespace CaseStudy
             }
         }
 
-        public void ProceesingPayment()
+        public void ProcessPayment()
         {
             Console.WriteLine("Enter the card details for product {0}", Name);
             string? crednum = Console.ReadLine();
@@ -48,5 +43,11 @@ namespace CaseStudy
             }
         }
 
+        public void DeliveryOrder()
+        {
+            Console.WriteLine("Download link is {0}", DownloadLink);
+        }
     }
+
 }
+

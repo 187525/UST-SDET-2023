@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace CaseStudy
 {
-    internal class Customers
+    internal class Customer1
     {
         public int CustomerID { get; set; }
         public string? CustomerName { get; set; }
@@ -16,7 +16,7 @@ namespace CaseStudy
         public List<PhysicalProduct> ordersphy = new List<PhysicalProduct>();
         public List<DigitalProduct> confirmedorders = new List<DigitalProduct>();
         public List<PhysicalProduct> confirmedordersphy = new List<PhysicalProduct>();
-        public static List<Customers> customers = new List<Customers>();
+        public static List<Customer1> customers = new List<Customer1>();
 
 
     }

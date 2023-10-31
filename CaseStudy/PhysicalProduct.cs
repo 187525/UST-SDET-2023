@@ -12,10 +12,7 @@ namespace CaseStudy
         public double Weight { get; set; }
         public string? Dimensions { get; set; }
 
-
-
-
-        public void PlacingOrder()
+        public void PlaceOrder()
         {
             Console.WriteLine("Do you want to continue the order\n1.yes\n2.no");
             int option = Convert.ToInt32(Console.ReadLine());
@@ -32,12 +29,7 @@ namespace CaseStudy
             }
         }
 
-        public void DeleveringProduct()
-        {
-            Console.WriteLine("product is shipped and shipping cost is {0}", Weight * 10);
-        }
-
-        public void ProceesingPayment()
+        public void ProcessPayment()
         {
             Console.WriteLine("Enter the card details for product {0}", Name);
             string? crednum = Console.ReadLine();
@@ -49,6 +41,11 @@ namespace CaseStudy
             {
                 Console.WriteLine("payment successful");
             }
+        }
+
+        public void DeliveryOrder()
+        {
+            Console.WriteLine("product is shipped and shipping cost is {0}", Weight * 10);
         }
     }
 }
