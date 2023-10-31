@@ -327,22 +327,28 @@ Console.WriteLine(g4.Val1 + "   " + g4.Val2);*/
 ga.Disp();*/
 
 
-public delegate void Del1(string mess);
 
+/public delegate void DelegateOne(string msg);
+public delegate void DelegateTwo(int n1,int n2);
+public delegate int DelegateThree(int n1,int n2);   
+class Program
+{
+    public static void Main(string[] args)
+    {
+        DelegateOne delegateOne = DelegateExamples.MethodDisplay;
+        delegateOne("Helloooo aswin!!!");
+        DelegateExamples delegateExamples = new();
+        DelegateTwo delegateTwo = delegateExamples.Add;
+       
+        DelegateTwo delegateThree = delegateExamples.Sub;
+        DelegateThree delegateThree1 = delegateExamples.Addr;
+        Console.WriteLine(delegateThree1(20, 20));
+        DelegateTwo delegateobj = delegateTwo + delegateThree-delegateThree;//MultiCasting symbol of delegate is +.
+        delegateobj(10, 20);
+       
 
-
-//class Program:DelEx
-//{                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 
-
-//    public static void main(string[] args)
-//    {
-
-//        DelEx de]lEx = new();
-//        Del1 dobj1 = DelEx.MethodA;
-//        dobj1.Invoke();
-
-//    }
-//}
+    }
+}
 
 
 

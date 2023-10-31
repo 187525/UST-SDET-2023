@@ -264,7 +264,7 @@ else
 }*/
 //0---------------------------------------------------------------
 
-Inventory<string> inventory = new Inventory<string>();
+/*Inventory<string> inventory = new Inventory<string>();
 
 do
 {
@@ -316,7 +316,58 @@ do
             break;
     
     }
-}while (true);
+}while (true);*/
+/*
+class Program
+{
+    public delegate double DelegateOne(Employees employee);
+    public delegate double DelegateTwo(Employees employeeone);
+
+    public static void Main(String[] args)
+    {
+        DelegateExample delegateExample = new DelegateExample();
+        Employees employee = new(1, "Arya", 4);
+        Employees employeeone = new(2, "Jaya", 5);
+        DelegateOne delegateOne = Employees.BonusCalculation;
+        DelegateTwo delegateTwo = Employees.BonusCalculation;
+        Console.WriteLine($"Employee Name:{employee.EmployeeName}\nPerformance Rating:{employee.PerformanceRange}\nBonus Amount:{delegateOne(employee)}");
+        Console.WriteLine($"Employee Name:{employeeone.EmployeeName}\nPerformance Rating:{employeeone.PerformanceRange}\nBonus Amount:{delegateTwo(employeeone)}");
+
+    }
+}*/
+
+
+class Program
+{
+    public delegate string DelegateMessageOne(string msg);
+    public delegate string DelegateMessageTwo(string msg);
+    public static void Main(string[] args)
+    {
+        HotelEvent hotelEvent = new("Dj", "Trivandrum", "12.00:12-10-2023", 4);
+        DelegateMessageOne delegateMessageOne = HotelEvent.EventRegistration;
+        if (hotelEvent != null)
+        {
+            Console.WriteLine(delegateMessageOne($"Hai {hotelEvent.EventName} is Successfully Registered the event on {hotelEvent.EventDate}"));
+        }
+        else
+        {
+            Console.WriteLine(delegateMessageOne("Unsuccessfully registered"));
+        }
+        HotelEvent hotelEventone = new("Hallowing", "Kollam", "12.0013-10-2023", 6);
+
+        DelegateMessageTwo delegateMessageTwo = HotelEvent.EventRegistration;
+        if (hotelEventone != null)
+        {
+            Console.WriteLine(delegateMessageTwo($"Hai {hotelEventone.EventName} is Successfully Registered the event on {hotelEventone.EventDate}"));
+        }
+        else
+        {
+            Console.WriteLine(delegateMessageTwo("Unsuccessfully registered"));
+        }
+    }
+}
+
+
 
 
 
