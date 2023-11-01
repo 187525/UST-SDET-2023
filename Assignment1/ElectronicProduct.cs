@@ -6,27 +6,19 @@ using System.Threading.Tasks;
 
 namespace Assignment1
 {
-    internal class ElectronicProduct:Product
+    internal class ElectronicsProduct:Product
     {
-
-        public ElectronicProduct(string? productname, double price, double quantity, int warrantyPeriod) 
-            : base(productname, price, quantity)
+        int warrantyperiod;
+        public ElectronicsProduct(string? productname, int price, int quantity, int warrantyPeriod) : base(productname, price, quantity)
         {
-           Productname = productname;
-            Price = price;
-            Quantity = quantity;
-            WarrantyPeriod = warrantyPeriod;
+            this.warrantyperiod = warrantyPeriod;
 
-            
         }
-
-        
-     public int WarrantyPeriod { get; set; }
-
         public void DisplayWarrantyPeriod()
         {
-            Console.WriteLine("Warranty period:" +WarrantyPeriod);
+            Console.WriteLine($"Warranty Period is:{warrantyperiod}");
         }
+
 
     }
 }

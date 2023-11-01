@@ -336,7 +336,7 @@ class Program
     }
 }*/
 
-
+/*
 class Program
 {
     public delegate string DelegateMessageOne(string msg);
@@ -366,6 +366,28 @@ class Program
         }
     }
 }
+*/
+/*
+TourismDestination t1 = new("munnar","India",4);
+TourismDestination t2 = new("Ooty", "India", 2);
+TourismDestination t3 = new("Manali", "India", 5);
+TourismDestination.tourismDestination.Add(t1);
+TourismDestination.tourismDestination.Add(t2);
+TourismDestination.tourismDestination.Add(t3);
+
+TourismDestination.TourismDestSort();*/
+
+TourismDestination1 t1 = new("munnar", "India", 4, 5000);
+TourismDestination1 t2 = new("Ooty", "India", 2,3000);
+TourismDestination1 t3 = new("Manali", "India", 5, 4000);
+TourismDestination1.tourismDestination1.Add(t1);
+TourismDestination1.tourismDestination1.Add(t2);
+TourismDestination1.tourismDestination1.Add(t3);
+
+TourismDestination1.DisplayTopRated();
+TourismDestination1.SortedDestination();
+TourismDestination1.FilterDestination();
+
 
 
 
