@@ -389,7 +389,7 @@ TourismDestination1.SortedDestination();
 TourismDestination1.FilterDestination();*/
 
 
-class program
+/*class program
 {
     static async Task Main(string[] args)
     {
@@ -403,7 +403,25 @@ class program
 
     }
 
-}
+}*/
+
+
+TourPackage package = new TourPackage(1, "kochi", "12-11-2024", 1300);
+TourPackage package1 = new TourPackage(2, "Kolam", "12-10-2024", 1200);
+TourPackage package2 = new TourPackage(3, "kannur", "2-2-2023", 1100);
+
+TourPackage.TourPackages.Add(package1);
+TourPackage.TourPackages.Add(package2);
+TourPackage.TourPackages.Add(package);
+
+
+Thread thread = new Thread(TourPackage.HotelReservation);
+
+Thread thread1 = new Thread(TourPackage.HotelReservation);
+
+thread1.Start();
+thread1.Join();
+thread.Start();
 
 
 
