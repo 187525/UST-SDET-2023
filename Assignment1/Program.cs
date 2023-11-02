@@ -377,7 +377,7 @@ TourismDestination.tourismDestination.Add(t3);
 
 TourismDestination.TourismDestSort();*/
 
-TourismDestination1 t1 = new("munnar", "India", 4, 5000);
+/*TourismDestination1 t1 = new("munnar", "India", 4, 5000);
 TourismDestination1 t2 = new("Ooty", "India", 2,3000);
 TourismDestination1 t3 = new("Manali", "India", 5, 4000);
 TourismDestination1.tourismDestination1.Add(t1);
@@ -386,7 +386,24 @@ TourismDestination1.tourismDestination1.Add(t3);
 
 TourismDestination1.DisplayTopRated();
 TourismDestination1.SortedDestination();
-TourismDestination1.FilterDestination();
+TourismDestination1.FilterDestination();*/
+
+
+class program
+{
+    static async Task Main(string[] args)
+    {
+        Hotel hotel1 = new Hotel("Trivandrum", "India", 4, 9875, "Flamingo", 40);
+        Hotel hotel2 = new Hotel("Ponmudi", "India", 3, 3500, "DreamLand", 29);
+        Hotel hotel3 = new Hotel("Idukki", "India", 3, 7450, "Parakatt", 10);
+
+        await hotel1.BookRooms("Flamingo", 41);
+        await hotel2.BookRooms("DreamLand", 2);
+        await hotel3.BookRooms("Parakatt", 1);
+
+    }
+
+}
 
 
 
