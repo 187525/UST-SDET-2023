@@ -328,7 +328,7 @@ ga.Disp();*/
 
 
 
-/public delegate void DelegateOne(string msg);
+/*public delegate void DelegateOne(string msg);
 public delegate void DelegateTwo(int n1,int n2);
 public delegate int DelegateThree(int n1,int n2);   
 class Program
@@ -351,8 +351,50 @@ class Program
 }
 
 
+*/
+
+/*class Program
+{
+    static void Main()
+    {
+        CustomStack<int> stack = new CustomStack<int>(5);
+
+        stack.Push(1);
+        stack.Push(2);
+        stack.Push(3);
+
+        var topItem = stack.Peek();
+        Console.WriteLine($"Top item: {topItem}");
+
+        stack.Pop();
+        stack.Pop();
+        stack.Pop();
+        stack.Pop(); // Trying to pop from an empty stack
+
+        stack.Push(4);
+    }
+}*/
 
 
+class Program
+{
+    static void Main()
+    {
+        CustomQueue<int> queue = new CustomQueue<int>(5);
+
+        queue.Enqueue(1);
+        queue.Enqueue(2);
+        queue.Enqueue(3);
+
+        queue.Dequeue();
+        queue.Dequeue();
+        queue.Dequeue();
+        queue.Dequeue(); // Trying to dequeue from an empty queue
+
+        queue.Enqueue(4);
+        queue.Enqueue(5);
+    }
+}
 
 
 

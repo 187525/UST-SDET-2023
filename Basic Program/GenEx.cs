@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Basic_Program
+/*namespace Basic_Program
 {
     /*internal class GenEx<T>
     {

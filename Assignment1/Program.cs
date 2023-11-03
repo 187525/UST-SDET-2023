@@ -406,7 +406,7 @@ TourismDestination1.FilterDestination();*/
 }*/
 
 
-TourPackage package = new TourPackage(1, "kochi", "12-11-2024", 1300);
+/*TourPackage package = new TourPackage(1, "kochi", "12-11-2024", 1300);
 TourPackage package1 = new TourPackage(2, "Kolam", "12-10-2024", 1200);
 TourPackage package2 = new TourPackage(3, "kannur", "2-2-2023", 1100);
 
@@ -421,9 +421,61 @@ Thread thread1 = new Thread(TourPackage.HotelReservation);
 
 thread1.Start();
 thread1.Join();
-thread.Start();
+thread.Start();*/
+/*
+TaskItem taskItem = new TaskItem();
+while (true)
+{
+    Console.WriteLine("Enter the choice\n1.Add Task\n2.Remove Task\n3.Mark task as complete\n4.Display Task\n5.Display completed task\n6.Display pending task\n7.Exit");
+    switch (Convert.ToInt32(Console.ReadLine()))
+    {
+        case 1:
+            Console.WriteLine("Enter the task id");
+            int id = Convert.ToInt32(Console.ReadLine());
+            Console.WriteLine("Enter the task description");
+            string? description = Console.ReadLine();
+            taskItem.AddTask(id, description, false);
+            break;
+        case 2:
+            Console.WriteLine("Enter the task id to remove");
+            int rid = Convert.ToInt32(Console.ReadLine());
+            taskItem.RemoveTask(rid);
+            break;
+        case 3:
+            Console.WriteLine("Enter tha task id to make it complete");
+            int m_id = Convert.ToInt32(Console.ReadLine());
+            taskItem.MarkTaskComplete(m_id);
+            break;
+        case 4:
+            taskItem.DisplayTask();
+            break;
+        case 5:
+            taskItem.displayCompletedTask();
+            break;
+        case 6:
+            taskItem.DisplayPending();
+            break;
+        case 7:
+            Environment.Exit(0);
+            break;
+        default:
+            break;
+    }
+}*/
 
+FamilyMember grandparent = new FamilyMember("Grandparent", 70);
+FamilyMember parent1 = new FamilyMember("Parent 1", 40);
+FamilyMember parent2 = new FamilyMember("Parent 2", 38);
+FamilyMember child1 = new FamilyMember("Child 1", 12);
+FamilyMember child2 = new FamilyMember("Child 2", 8);
 
+grandparent.AddChild(parent1);
+grandparent.AddChild(parent2);
+parent1.AddChild(child1);
+parent2.AddChild(child2);
+
+FamilyTree familyTree = new FamilyTree(grandparent);
+familyTree.DisplayFamilyTree();
 
 
 
